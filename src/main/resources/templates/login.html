@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Your Book - Login</title>
+
+    <th:block th:replace="fragments/styles :: common"></th:block>
+
+    <style>
+        /* Add custom styles for the background image */
+        body.login {
+            background-image: url('https://images2.alphacoders.com/108/1082312.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed; /* Make the background fixed */
+            padding: 0;
+            margin: 0; /* Remove default body margin */
+            height: 100vh; /* Set height to viewport height */
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body class="login">
+<div>
+    <div class="login_wrapper">
+        <section class="login_content">
+            <form th:action="@{/login}" method="post" id="loginform">
+                <h1>Login Form</h1>
+                <div>
+                    <input type="text" class="form-control" placeholder="Username" name="username" />
+                </div>
+                <div>
+                    <input type="password" class="form-control" placeholder="Password" name="password" />
+                </div>
+                <div>
+                    <a class="btn btn-default submit" href="javascript:void(0)" onclick="document.getElementById('loginform').submit();">Log in</a>
+                </div>
+                <!-- Add Forgot Password Button -->
+                <div>
+                    <a class="btn btn-link" href="/signup">Forgot Password?</a>
+                </div>
+                <div class="clearfix"></div>
+                <div class="separator">
+                    <div class="clearfix"></div>
+                    <br />
+                    <div>
+                        <h1><i class="fa fa-paw"></i> Your Book</h1>
+                    </div>
+                </div>
+            </form>
+        </section>
+    </div>
+</div>
+</body>
+<!-- footer.html -->
+<!--<footer>-->
+<!--    <p>&copy; 2024 Your Book. All rights reserved.</p>-->
+<!--</footer>-->
+
+</html>
