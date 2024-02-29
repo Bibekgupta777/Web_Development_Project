@@ -1,4 +1,4 @@
-# spark-lms
+# Your Book
 Library Management System developed in Spring Boot.
 
 
